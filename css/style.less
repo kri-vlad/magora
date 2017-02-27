@@ -1,0 +1,218 @@
+@text-black: #333;
+@main-green: #1abc9c;
+
+body {
+	min-width: 1200px;
+	font-family: 'opensans', 'Arial', sans-serif;
+	color: @text-black;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.page-header {
+	background-color: @main-green;
+	h1 {
+		text-align: center;
+		padding: 30px 20px;
+		margin: 30px auto;
+		color: white;
+	}
+}
+.page-main {
+	.page-reviews {
+		width: 1200px;
+		padding: 20px 20px;
+		margin: 0 auto;
+		background-color: #f1f1f1;
+		box-shadow: 0px 0px 20px rgba(4, 4, 6, 0.2);
+		h2 {
+			margin: 0;
+			margin-bottom: 20px;
+			color: #8e9192;
+		}
+		.reviews-list {
+			.reviews-item {
+				padding: 5px 10px;
+				margin-bottom: 15px;
+				background-color: white;
+				border-radius: 10px;
+				.user-name {
+					text-decoration: none;
+					color: @main-green;
+					font-weight: bolder;
+				}
+				.post {
+					padding-left: 20px;
+					margin: 15px 0;
+					font-size: 14px;
+					overflow-wrap: break-word;
+					word-wrap: break-word;
+					-ms-word-break: break-all;
+					word-break: break-all;
+					word-break: break-word;
+					-ms-hyphens: auto;
+					-moz-hyphens: auto;
+					-webkit-hyphens: auto;
+					hyphens: auto;
+				}
+				.edit-form-review {
+					width: 100%;
+					max-width: 100%;
+					padding-left: 10px;
+					padding-top: 10px;
+					font-size: 14px;
+				}
+				.review-footer {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					.date-post {
+						font-size: 12px;
+						line-height: 23px;
+					}
+					.review-panel {
+						display: flex;
+						justify-content: flex-end;
+						.review-save,
+						.review-edit,
+						.review-remove {
+							display: block;
+							padding: 3px 10px;
+							margin-left: 15px;
+
+							font-weight: bold;
+							font-size: 10px;
+							text-transform: uppercase;
+							color: white;
+
+							border: 2px solid transparent;
+							border-radius: 3px;
+							background-color: @main-green;
+							transition: color, background-color, border 1s;
+							&:hover {
+								cursor: pointer;
+								background-color: white;
+								color: @main-green;
+								border: 2px solid @main-green;
+							}
+						}
+					}
+				}
+			}
+		}
+		.create-review {
+			label {
+				display: block;
+				margin-bottom: 15px;
+				sup {
+					color: @main-green;
+					font-size: 14px;
+					top: 0;
+				}
+				.clearfix;
+				input,
+				textarea {
+					margin-top: 10px;
+					padding: 10px 15px;
+					border: none;
+					border-radius: 3px;
+					box-sizing: border-box;
+					color: @text-black;
+				}
+				input {
+					height: 40px;
+				}
+			}
+			label[for='name'] {
+				float: left;
+				width: 48%;
+				input {
+					width: 100%;
+				}
+			}
+			label[for='phone'] {
+				float: right;
+				width: 48%;
+				input {
+					width: 100%;
+				}
+			}
+			label[for='text'] {
+				.clearfix;
+				textarea {
+					width: 100%;
+					max-width: 100%;
+					min-height: 120px;
+					font-size: 14px;
+				}
+				.help-text {
+					float: left;
+					font-size: 12px;
+					margin-top: 5px;
+					margin-bottom: 0;
+					sup {
+						color: @main-green;
+						font-size: 14px;
+						top: 0;
+					}
+				}
+				.maxlength {
+					margin-top: 5px;
+					margin-right: 10px;
+					font-size: 12px;
+					float: right;
+				}
+			}
+			button {
+				display: block;
+				padding: 15px 20px;
+				margin: 0 auto;
+				font-weight: bold;
+				font-size: 14px;
+				text-transform: uppercase;
+				color: white;
+				border: 2px solid transparent;
+				border-radius: 3px;
+				background-color: @main-green;
+				transition: color, background-color, border 1s;
+				&:hover {
+					cursor: pointer;
+					background-color: white;
+					color: @main-green;
+					border: 2px solid @main-green;
+				}
+			}
+		}
+	}
+}
+*::-webkit-input-placeholder {
+	font-family: 'opensans', 'Arial', sans-serif;
+	font-size: 14px;
+}
+*::-moz-placeholder {
+	font-family: 'opensans', 'Arial', sans-serif;
+	font-size: 14px;
+}
+*:-moz-placeholder {
+	font-family: 'opensans', 'Arial', sans-serif;
+	font-size: 14px;
+}
+*:-ms-input-placeholder {
+	font-family: 'opensans', 'Arial', sans-serif;
+	font-size: 14px;
+}
+
+.hide {
+	display: none !important;
+}

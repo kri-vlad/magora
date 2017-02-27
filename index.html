@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Гостевая книга</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Гостевая книга</h1>
+    </header>
+    <main class="page-main">
+        <section class="page-reviews">
+            <h2>Отзывы</h2>
+            <div class="reviews-list"></div>
+            <form action="/" class="create-review" method="post">
+                <label for="name">Имя <sup>*</sup>
+                    <input type="text" id="name" class="form-name" placeholder="Введите своё имя" pattern="[A-Za-z-А-Яа-я- ]{0,24}" maxlength="24" required>
+                </label>
+                <label for="phone">Телефон
+                    <input type="text" id="phone" class="form-phone" placeholder="+7 900-000-00-00" pattern="^\+7 [0-9]{3,3}-[0-9]{3,3}-[0-9]{2,2}-[0-9]{2,2}$">
+                </label>
+                <label for="text">Сообщение <sup>*</sup>
+                    <textarea name="text-review" id="text" class="form-review" placeholder="Напишите свой отзыв здесь..." maxlength="256" required></textarea>
+                    <span class="help-text"><sup>*</sup> Обязательное поле</span>
+                    <span class="maxlength"></span>
+                </label>
+                <button type="submit" class="btn-create-review">Оставить отзыв</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/momentjs.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
