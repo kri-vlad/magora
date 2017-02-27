@@ -1,4 +1,4 @@
 # Гостевая книга (Тестовое задание)
 
-*[Перейти на страницу](https://kri-vlad.github.io/magora/).
+* [Перейти на страницу](https://kri-vlad.github.io/magora/).
 
